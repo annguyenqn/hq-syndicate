@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    container_name: hq_syndicate
+    restart: always
+    environment:
+      POSTGRES_USER: kien_trinh
+      POSTGRES_PASSWORD: 123456a@
+      POSTGRES_DB: hq_syndicate_db
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
